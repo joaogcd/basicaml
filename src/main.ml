@@ -4,7 +4,7 @@ open Env
 
 
 let program = [
-  "10 LET X = 3";
+  "10 LET X = 10";
   "20 PRINT X";
   "30 LET X = X - 1";
   "40 IF X THEN GOTO 20";

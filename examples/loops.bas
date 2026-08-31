@@ -1,0 +1,5 @@
+10 REM count from 1 to 5
+20 FOR X = 1 TO 5
+30 PRINT X
+40 NEXT X
+50 END

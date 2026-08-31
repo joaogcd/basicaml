@@ -1,4 +1,3 @@
-
 type binop =
   | Add
   | Sub
@@ -45,6 +44,7 @@ type command =
   | End
 
 type line = int * command
+
 type program = line list
 
 type value =

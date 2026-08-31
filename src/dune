@@ -1,7 +1,8 @@
-(executable
- (name main)
+(library
+ (name basicaml)
  (public_name basicaml)
  (modules
+  error
   token
   lexer
   ast
@@ -9,4 +10,11 @@
   env
   eval
   machine
-  main))
+  printer
+  repl))
+
+(executable
+ (name main)
+ (public_name basicaml)
+ (modules main)
+ (libraries basicaml))

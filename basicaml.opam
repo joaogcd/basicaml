@@ -1,0 +1,24 @@
+opam-version: "2.0"
+name: "basicaml"
+version: "0.1.0"
+synopsis: "A simple BASIC interpreter in OCaml"
+description: """
+BasicAML is a minimalist interpreter for a subset of the BASIC programming
+language, implemented in OCaml for educational purposes. It demonstrates a
+layered pipeline (tokenization, parsing, evaluation and an execution machine)
+with typed, line-aware error reporting, a test suite and reading of .bas files.
+"""
+maintainer: "joaogcd <joaogcuzzuol@gmail.com>"
+authors: "joaogcd <joaogcuzzuol@gmail.com>"
+homepage: "https://github.com/Jooaogcd/basicaml"
+bug-reports: "https://github.com/Jooaogcd/basicaml/issues"
+dev-repo: "git+https://github.com/Jooaogcd/basicaml.git"
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.14"}
+  "dune" {>= "3.18"}
+  "alcotest" {with-test & >= "1.7"}
+]

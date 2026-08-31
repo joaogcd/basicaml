@@ -1,4 +1,3 @@
-
 type token =
   | LET
   | PRINT

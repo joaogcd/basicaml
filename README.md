@@ -1,8 +1,8 @@
-# BasicAML
+# Basicaml
 
 A minimalist BASIC interpreter implemented in OCaml for educational purposes.
 
-BasicAML demonstrates a layered interpreter pipeline — tokenization, parsing, a
+Basicaml demonstrates a layered interpreter pipeline — tokenization, parsing, a
 typed AST, expression evaluation and a stack-based execution machine — with
 line-aware error reporting across all stages.
 

@@ -1,26 +1,18 @@
 # Basicaml
 
-A minimalist BASIC interpreter implemented in OCaml for educational purposes.
+A minimalist BASIC interpreter implemented in OCaml.
 
-Basicaml demonstrates a layered interpreter pipeline — tokenization, parsing, a
-typed AST, expression evaluation and a stack-based execution machine — with
-line-aware error reporting across all stages.
+Basicaml demonstrates a layered interpreter pipeline (tokenization, parsing, a typed AST, expression evaluation and a stack-based execution machine) with line-aware error reporting across all stages.
 
 ## Features
 
-- **Statements:** `LET`, `PRINT`, `GOTO`, `IF ... THEN ... ELSE`,
-  `FOR ... TO ... [STEP] ... NEXT`, `GOSUB`/`RETURN`, `INPUT`, `DIM`, `REM`,
-  `END`.
-- **Expressions:** arithmetic (`+ - * /`), comparisons (`= <> < <= > >=`),
-  boolean logic (`AND OR NOT`), unary negation and `NOT`, parentheses.
+- **Statements:** `LET`, `PRINT`, `GOTO`, `IF ... THEN ... ELSE`, `FOR ... TO ... [STEP] ... NEXT`, `GOSUB`/`RETURN`, `INPUT`, `DIM`, `REM`, `END`.
+- **Expressions:** arithmetic (`+ - * /`), comparisons (`= <> < <= > >=`), boolean logic (`AND OR NOT`), unary negation and `NOT`, parentheses.
 - **Strings:** string literals, string/number concatenation with `+`.
-- **Built-in functions:** `ABS(x)`, `INT(x)`, `RND(x)`, `LEN(s)`,
-  `MOD(a, b)`.
+- **Built-in functions:** `ABS(x)`, `INT(x)`, `RND(x)`, `LEN(s)`, `MOD(a, b)`.
 - **Arrays:** one-dimensional numeric arrays via `DIM A(n)` (0-based).
-- **Error reporting:** typed (`Lex_error`, `Parse_error`, `Runtime_error`),
-  line-aware error messages at every stage.
-- **REPL:** interactive loop with immediate execution, program storage, and
-  `LIST`/`RUN`/`CLEAR`/`NEW`/`QUIT`/`HELP` commands.
+- **Error reporting:** typed (`Lex_error`, `Parse_error`, `Runtime_error`), line-aware error messages at every stage.
+- **REPL:** interactive loop with immediate execution, program storage, and `LIST`/`RUN`/`CLEAR`/`NEW`/`QUIT`/`HELP` commands.
 - **File execution:** run `.bas` files directly from the command line.
 
 ## Requirements
@@ -59,16 +51,16 @@ dune exec basicaml -- --version
 
 ### REPL commands
 
-| Command | Description |
-| --- | --- |
-| `<number> <statement>` | Store a line in the program |
-| `<number>` | Delete a line |
-| `<statement>` | Run immediately (shares variables with stored program) |
-| `RUN` | Execute the stored program |
-| `LIST` | Print the stored program |
-| `CLEAR` / `NEW` | Reset program and variables |
-| `QUIT` / `BYE` / `EXIT` | Leave the REPL |
-| `HELP` | Show help text |
+| Command                 | Description                                            |
+| ----------------------- | ------------------------------------------------------ |
+| `<number> <statement>`  | Store a line in the program                            |
+| `<number>`              | Delete a line                                          |
+| `<statement>`           | Run immediately (shares variables with stored program) |
+| `RUN`                   | Execute the stored program                             |
+| `LIST`                  | Print the stored program                               |
+| `CLEAR` / `NEW`         | Reset program and variables                            |
+| `QUIT` / `BYE` / `EXIT` | Leave the REPL                                         |
+| `HELP`                  | Show help text                                         |
 
 Example session:
 
@@ -86,15 +78,15 @@ basicaml> RUN
 
 The `examples/` directory contains sample programs:
 
-| File | Description |
-| --- | --- |
-| `arithmetic.bas` | Basic arithmetic operations |
-| `arrays.bas` | Array declaration and access |
-| `countdown.bas` | Countdown loop with GOTO |
-| `factorial.bas` | Recursive factorial with GOSUB/RETURN |
-| `greet.bas` | User input and string concatenation |
-| `ifelse.bas` | Conditional branching |
-| `loops.bas` | FOR/NEXT loop patterns |
+| File             | Description                           |
+| ---------------- | ------------------------------------- |
+| `arithmetic.bas` | Basic arithmetic operations           |
+| `arrays.bas`     | Array declaration and access          |
+| `countdown.bas`  | Countdown loop with GOTO              |
+| `factorial.bas`  | Recursive factorial with GOSUB/RETURN |
+| `greet.bas`      | User input and string concatenation   |
+| `ifelse.bas`     | Conditional branching                 |
+| `loops.bas`      | FOR/NEXT loop patterns                |
 
 Run any example with:
 

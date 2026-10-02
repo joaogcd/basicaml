@@ -10,7 +10,4 @@ dune exec basicaml -- program.bas   # run a program file
 dune exec basicaml                  # start the interactive REPL
 ```
 
-The build profile treats warnings as errors (the default `dev` profile), and
-the code relies on this: a non-exhaustive `match` that would compile with a
-warning **breaks the build**. Whenever you extend a sum type (for example
-`value`, `expr`, `command`), update every `match` that consumes it.
+The build profile treats warnings as errors (the default `dev` profile), and the code relies on this: a non-exhaustive `match` that would compile with a warning **breaks the build**. Whenever you extend a sum type (for example`value`, `expr`, `command`), update every `match` that consumes it.
